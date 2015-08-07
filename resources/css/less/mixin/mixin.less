@@ -1,0 +1,234 @@
+.b-radius (@radius: 0) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.border-radius(@radius:0px) {
+    border-radius: @radius;
+    -moz-border-radius: @radius;
+    -webkit-border-radius: @radius;
+    -khtml-border-radius: @radius;
+}
+
+.opacity(@val) {
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=@val);
+    -moz-opacity: @val/100;
+    -khtml-opacity: @val/100;
+    opacity: @val/100;
+}
+
+
+.box-shadow(@val: none) {
+    -webkit-box-shadow: @val;
+    -moz-box-shadow:    @val;
+    box-shadow:         @val;
+}
+
+
+
+/* вертикальный градиент  */
+.gradient-vertical(@start: #000, @stop: #fff, @stopp: 100%) {
+    background: @start;
+    background: -moz-linear-gradient(top,  @start 0%, @stop @stopp);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@start), color-stop(@stopp,@stop));
+    background: -webkit-linear-gradient(top,  @start 0%,@stop @stopp);
+    background: -o-linear-gradient(top,  @start 0%,@stop @stopp);
+    background: -ms-linear-gradient(top,  @start 0%,@stop @stopp);
+    background: linear-gradient(to bottom,  @start 0%,@stop @stopp);
+    .linear-gradient-ie( top, @start, @stop);
+}
+/* горизонтальный градиент  */
+.gradient-horizontal(@start: #000, @stop: #fff) {
+    background: @start;
+    background: -moz-linear-gradient(left,  @start 0%, @stop 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,@start), color-stop(100%,@stop));
+    background: -webkit-linear-gradient(left,  @start 0%,@stop 100%);
+    background: -o-linear-gradient(left,  @start 0%,@stop 100%);
+    background: -ms-linear-gradient(left,  @start 0%,@stop 100%);
+    background: linear-gradient(to right,  @start 0%,@stop 100%);
+    .linear-gradient-ie( top, @start, @stop);
+}
+/* поверхностный градиент */
+.gradient (@origin: top, @opacity: 0.5) {
+    background-image: -webkit-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@opacity));
+    background-image: -moz-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@opacity));
+    background-image: -o-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@opacity));
+    background-image: -ms-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@opacity));
+    background-image: linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@opacity));
+}
+
+.radial-gradient(@center, @cover) {
+    background: @center;
+    background: -moz-radial-gradient(center, ellipse cover, @center 0%, @cover 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, @center 0%,@cover 100%);
+    background: -o-radial-gradient(center, ellipse cover, @center 0%,@cover 100%);
+    background: -ms-radial-gradient(center, ellipse cover, @center 0%,@cover 100%);
+    background: radial-gradient(center, ellipse cover, @center 0%,@cover 100%);
+}
+
+.liner-gradient (@start, @stop) {
+    background-color: @start;
+    background: -webkit-gradient(linear, left top, left bottom, from(@start), to(@stop));
+    background: -webkit-linear-gradient(top, @start, @stop);
+    background: -moz-linear-gradient(top, @start, @stop);
+    background: -ms-linear-gradient(top, @start, @stop);
+    background: -o-linear-gradient(top, @start, @stop);
+    .linear-gradient-ie( top, @start, @stop);
+}
+
+
+
+
+
+
+
+.linear-gradient( @start-color: #eee, @end-color: #aaa, @dir: top ) {
+    background: -webkit-linear-gradient(@dir, @start-color 0%, @end-color 100%);
+    background: -moz-linear-gradient(@dir, @start-color 0%, @end-color 100%);
+    background: -ms-linear-gradient(@dir, @start-color 0%, @end-color 100%);
+    background: -o-linear-gradient(@dir, @start-color 0%, @end-color 100%);
+    background: linear-gradient(@dir, @start-color 0%, @end-color 100%);
+    .linear-gradient-ie( @dir, @start-color, @end-color);
+}
+.linear-gradient-multi( ... ) {
+    background-image: -webkit-linear-gradient(@arguments);
+    background-image: -moz-linear-gradient(@arguments);
+    background-image: -ms-linear-gradient(@arguments);
+    background-image: -o-linear-gradient(@arguments);
+    background-image: linear-gradient(@arguments);
+}
+.linear-gradient-ie( @dir, @start-color, @end-color) when (@dir = top), 
+    not ( isstring(@dir) ) and ( @dir >= 225 ) and ( @dir < 315 ), 
+    not ( isstring(@dir) ) and ( @dir >= -135 ) and ( @dir < -45 ) {
+        .linear-gradient-ie-filter(@start-color, @end-color, 0);
+}
+.linear-gradient-ie( @dir, @start-color, @end-color) when (@dir = right), 
+    not ( isstring(@dir) ) and ( @dir >= 135 ) and ( @dir < 225 ), 
+    not ( isstring(@dir) ) and ( @dir >= -225 ) and ( @dir < -135 ) {
+        .linear-gradient-ie-filter(@end-color, @start-color, 1);
+}
+.linear-gradient-ie( @dir, @start-color, @end-color) when (@dir = bottom), 
+    not ( isstring(@dir) ) and ( @dir >= 45 ) and ( @dir < 135 ), 
+    not ( isstring(@dir) ) and ( @dir >= -315 ) and ( @dir < -225 ) {
+        .linear-gradient-ie-filter(@end-color, @start-color, 0);
+}
+.linear-gradient-ie( @dir, @start-color, @end-color) when (@dir = left), 
+    not ( isstring(@dir) ) and ( @dir >= 315 ) and ( @dir < 360 ), 
+    not ( isstring(@dir) ) and ( @dir >= -45 ) and ( @dir < 45 ), 
+    not ( isstring(@dir) ) and ( @dir < -315 ) and ( @dir >= -360 ) {
+        .linear-gradient-ie-filter(@start-color, @end-color, 1);
+}
+.linear-gradient-ie-filter(@start: #eee, @end: #aaa, @type: 1) {
+    @c-start: argb(@start);
+    @c-end:   argb(@end);
+    filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr='@{c-start}', endColorstr='@{c-end}', GradientType=@{type})";
+    -ms-filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr='@{c-start}',endColorstr='@{c-end}',GradientType=@{type})";
+}
+
+
+.rgba(@colour, @alpha){
+    @alphaColour: hsla(hue(@colour), saturation(@colour), lightness(@colour), @alpha);
+    @ieAlphaColour: argb(@alphaColour);
+
+    background-color: @colour; // Fallback for older browsers
+    background-color: @alphaColour; 
+
+    // IE hacks
+    zoom: 1; // hasLayout
+    background-color: transparent\9;
+    -ms-filter:  "progid:DXImageTransform.Microsoft.gradient(startColorstr=@{ieAlphaColour}, endColorstr=@{ieAlphaColour})"; // IE 8+
+        filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=@{ieAlphaColour}, endColorstr=@{ieAlphaColour})"; // IE 6 & 7
+}
+.opacity(@a:0.5){
+    zoom:1;
+    opacity: @a;
+    -moz-opacity: @a;
+    @iea : @a*100;
+    -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=(@{iea}))";
+    filter:~"alpha(opacity= @{iea})";
+}
+
+
+
+
+
+
+
+.transform (@param) {
+    -moz-transform: @param;
+    -ms-transform: @param;
+    -webkit-transform: @param;
+    -o-transform: @param;
+    transform: @param;
+}
+.transform (@rotate: 90deg, @scale: 1, @skew: 0deg, @translate: 0px) {
+    -webkit-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+    -moz-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+    -o-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+    -ms-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+    transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+}
+
+
+
+
+
+
+.transition(@param: all 1s ease) {
+    -webkit-transition: @param;
+    -moz-transition: @param;
+    -o-transition: @param;
+    transition: @param;
+}
+
+.transitions(@val) {
+    -webkit-transition: @val;
+    -moz-transition: @val;
+    -ms-transition: @val;
+    -o-transition: @val;
+    transition: @val;
+}
+
+
+
+.animation (@name, @duration: 300ms, @delay: 0, @ease: ease) {
+    -webkit-animation: @name @duration @delay @ease;
+    -moz-animation: @name @duration @delay @ease;
+    -ms-animation: @name @duration @delay @ease;
+    animation: @name @duration @delay @ease;
+}
+
+
+.user-select(@sel: none) {
+    -webkit-user-select: @sel;
+       -moz-user-select: @sel;
+        -ms-user-select: @sel;
+         -o-user-select: @sel;
+            user-select: @sel;
+}
+
+
+
+.perspective (@value: 1000) {
+    -webkit-perspective:    @value;
+    -moz-perspective:   @value;
+    -ms-perspective:    @value;
+    perspective:        @value;
+}
+
+
+
+
+
+
+.cover-bg(@abs_path_img) {
+    background: url(@abs_path_img) center 0 no-repeat transparent;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    //filters are not relative to css, they require a full server path
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='@{abs_path_img}', sizingMethod='scale'); 
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='@{abs_path_img}', sizingMethod='scale')";
+}

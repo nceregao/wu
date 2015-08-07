@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- meta CSS & Scripts Include -->
+<?php $title="activation"; require_once('blocks/general/includings.html'); ?>
+
+</head>
+<body>
+
+
+
+<?php require_once('blocks/general/menu.html'); ?>
+
+
+
+
+    <!-- wrap -->
+    <div id="wrap">
+
+
+
+
+
+        <header class="wrp-header">
+            <!-- Header Include -->
+<?php require_once('blocks/general/header.html'); ?>
+
+        </header>
+
+
+
+
+        <!-- Content -->
+        <section class="wrp-content">
+            <div class="wrp-grid">
+
+
+
+                <div class="grd-full">
+                    <div class="block-register">
+
+                        <h1 class="g-tacenter">Активация учетной записи</h1>
+
+                        <p><b class="text-blue">%Имя%!</b><br>На адрес <b class="text-blue">%e-mail%</b> выслан код активации вашей учетной записи. Для завершения процедуры регистрации скопируйте и вставьте код в поле этой формы либо перейдите по ссылке из полученного письма.</p>
+
+                        <div class="general-form">
+                            <form>
+                                <label class="b-gf__holder">
+                                    <input type="text" placeholder="Код активации">
+                                    <i class="icon-key"></i>
+                                    <span class="b-gf__reqired">Поле обязательно для ввода</span>
+                                </label>
+                                <div class="mb50">
+                                    <input type="submit" value="Активировать" class="g-button dark btn-full">
+                                </div>
+                            </form>
+                        </div>
+
+                        <p>Если письмо с кодом активации не пришло или случайно удалено, введите ваш e-mail, указанный при регистрации, для генерации нового кода и повторной отправки письма.</p>
+
+                        <div class="general-form">
+                            <form>
+                                <label class="b-gf__holder">
+                                    <input type="text" placeholder="Код активации">
+                                    <i class="icon-envelope"></i>
+                                    <span class="b-gf__reqired">Поле обязательно для ввода</span>
+                                </label>
+                                <div class="mb50">
+                                    <input type="submit" value="Сгенерировать новый код" class="g-button dark btn-full">
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </section>
+        <!-- Content End -->
+
+
+
+
+<!-- Footer Include -->
+<?php require_once('blocks/general/footer.html'); ?>
+
+
+
+    </div>
+    <!-- wrap End -->
+
+
+<?php require_once('blocks/general/modal.html'); ?>
+
+
+</body>
+</html>

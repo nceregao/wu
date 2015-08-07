@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- meta CSS & Scripts Include -->
+<?php $title="recovery"; require_once('blocks/general/includings.html'); ?>
+
+</head>
+<body>
+
+
+
+<?php require_once('blocks/general/menu.html'); ?>
+
+
+
+
+    <!-- wrap -->
+    <div id="wrap">
+
+
+
+
+
+        <!-- Header Include -->
+<?php require_once('blocks/general/header.html'); ?>
+
+
+
+
+
+        <!-- Content -->
+        <section class="wrp-content">
+            <div class="wrp-grid">
+
+
+
+                <div class="grd-full">
+
+
+
+                    <div class="block-register">
+
+                        <h1>Восстановление пароля</h1>
+
+                        <p>Введите в форму ваш e-mail и получите письмо с инструкцией по восстановлению пароля.</p>
+
+                        <div class="general-form">
+                            <form>
+                                <label class="b-gf__holder">
+                                    <input type="text" placeholder="Электронная почта (e-mail)*">
+                                    <i class="icon-envelope"></i>
+                                    <span class="b-gf__reqired">Поле обязательно для ввода</span>
+                                </label>
+                                <div class="b-gf__captcha">
+                                    <img src="resources/tmp/code.jpg" height="44" width="110" alt="Защитный код">
+                                    <a class="b-gf__refresh icon-rotate-right" title="Нажмите для получения нового кода"></a>
+                                    <input type="text" placeholder="Введите код*">
+                                </div>
+                                <div class="errormsg info" style="display: block;">Инструкция по восстановлению пароля отправлены на <b>%e-mail%</b>.</div>
+                                <div class="mod-mb-x1">
+                                    <input type="submit" value="Востановить" class="g-button dark btn-full">
+                                </div>
+                                <a href="register.html" class="g-button light btn-full"><i class="icon-pencil"></i>Регистрация</a>
+                            </form>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+        </section>
+        <!-- Content End -->
+
+
+<!-- Footer Include -->
+<?php require_once('blocks/general/footer.html'); ?>
+
+    </div>
+    <!-- wrap End -->
+
+
+<?php require_once('blocks/general/modal.html'); ?>
+
+
+</body>
+</html>

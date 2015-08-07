@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- CSS & Scripts Include -->
+<?php $title="personal-data"; require_once('blocks/general/includings.html'); ?>
+
+</head>
+<body>
+
+
+<?php require_once('blocks/general/menu.html'); ?>
+
+
+    <!-- wrap -->
+    <div id="wrap">
+
+
+
+
+            <!-- Header Include -->
+<?php require_once('blocks/general/header.html'); ?>
+
+
+
+
+
+
+        <!-- Content -->
+        <section class="wrp-content">
+            <div class="wrp-grid">
+
+
+
+                <div class="grd-full">
+
+
+                    <h1 class="g-tacenter">Профиль</h1>
+
+                    <div class="block-welcome errormsg success"><span class="block-welcome__name">Дмитрий!</span> Благодарим Вас за регистрацию на нашем сайте</div>
+
+                    <h4 class="g-ttuppercase">Контактные данные</h4>
+
+
+                    <span class="user-info"><span class="text-grey">Имя:</span> Дмитрий</span>
+                    <span class="user-info"><span class="text-grey">Фамилия: нет данных</span></span>
+                    <span class="user-info"><span class="text-grey">Телефон: нет данных</span></span>
+                    <div class="errormsg info" style="display: block;">Пожалуйста, <u>введите недостающие данные.</u> Это ускорит процесс оформления вашего заказ</div>
+
+                    <a id="change-contact" class="link-blue-bg"><i class="icon-pencil"></i>Редактировать контактные данные</a>
+
+                    <hr class="g-line-dotted">
+
+                    <span class="user-info"><span class="text-grey">Электронная почта:</span> k.dmitriy82@gmail.com</span>
+
+                    <a id="change-email" class="link-blue-bg"><i class="icon-envelope"></i>Изменить e-mail</a>
+
+                    <hr class="g-line-dotted">
+
+                    <span class="user-info"><span class="text-grey">Пароль:</span> </span>
+
+                    <a id="change-password" class="link-blue-bg"><i class="icon-key"></i>Изменить пароль</span></a>
+
+                    <hr class="g-line-dotted">
+
+                    <h4>АДРЕСА ДЛЯ ДОСТАВОК</h4>
+
+                    <span class="user-info"><span class="text-grey">Ваша адресная книга пуста</span></span>
+
+                    <div class="address-deliveries">
+                        <form>
+                            <div class="address-deliveries__radio">
+                                <label>
+                                    <input type="radio" name="address">
+                                    <span>г. Киев, ул. Пушкинская, дом 14, офис 117</span>
+                                </label>
+                                <span class="close"></span>
+                            </div>
+                            <div class="address-deliveries__radio">
+                                <label>
+                                    <input type="radio" checked="" name="address">
+                                    <span>г. Киев, ул. Сумская, дом 34, кв 5</span>
+                                </label>
+                                <span class="address-deliveries__basic">Основной</span>
+                                <span class="close"></span>
+                            </div>
+                        </form>
+                    </div>
+
+                    <a id="change-address" class="link-blue-bg mb20"><i class="icon-map-marker"></i>Добавить адрес</a>
+
+
+                </div>
+
+ 
+            </div>
+        </section>
+        <!-- Content End -->
+
+
+        <!-- Footer Include -->
+<?php require_once('blocks/general/footer.html'); ?>
+
+    </div>
+    <!-- wrap End -->
+
+
+<?php require_once('blocks/general/modal.html'); ?>
+
+</body>
+</html>

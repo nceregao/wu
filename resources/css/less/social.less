@@ -1,0 +1,38 @@
+/*block-social*/
+.soc {
+    text-align: center;
+    letter-spacing: 10px;
+}
+.soc-link {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    padding: 7px;
+    font-size: 22px;
+    line-height: 30px;
+    text-decoration: none;
+    letter-spacing: normal;
+    *display: inline;
+    zoom: 1;
+
+    &:before {
+        display: block;
+        width: 30px;
+        height: 30px;
+        .b-radius(50%);
+        background-color: #fff;
+        text-align: center;
+    }
+}
+.bg-grey {
+    .soc-link:before {
+        background-color: #e6e6e6;
+    }
+}
+.icon-soc-g  { color: #CE372F }
+.icon-soc-yt { color: #F01C1F }
+.icon-soc-vk { color: #096299 }
+.icon-soc-ok { color: #ff6906 }
+.icon-soc-t  { color: #26abe2 }
+.icon-soc-f  { color: #39589B }

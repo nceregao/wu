@@ -1,0 +1,294 @@
+@green: #81bd55;
+@orange: #e7920a;
+@grey: #999999;
+@pink: #FF4160;
+@blue: #2B6EA8;
+/*---------------------header------------------*/
+.wrp-header {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    width: 100%;
+    padding: 7px 0;
+    background-color: #fc0;
+}
+
+
+
+.block-logo {
+    position: relative;
+    float: left;
+}
+.logo-paint {
+    display: none;
+}
+.logo {
+    display: block;
+    width: 120px;
+    height: 16px;
+    margin: 10px 0;
+    background: url(../images/logo-small.svg) no-repeat;
+    text-indent: -9999px;
+    color: #fff;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .wrp-header {
+        background-color: rgba(255,255,255,1);
+        border-bottom: 4px solid  #FABF00;
+        padding: 0;
+    }
+    .logo-paint {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    .logo {
+        position: relative;
+        z-index: 2;
+        width: 170px;
+        height: 170px;
+        margin: 0 0 -80px;
+        background: transparent;
+        // background: url(../images/logo.svg) no-repeat;
+        /* -webkit-animation: logo 2s linear forwards;
+           -moz-animation: logo 2s linear forwards;
+             -o-animation: logo 2s linear forwards;
+                animation: logo 2s linear forwards; */
+    }
+    .ie8, .ie9, .ie10 {
+        .logo {
+            background: url(../images/logo.svg) no-repeat;
+        }
+    }
+}
+/* @-webkit-keyframes logo {
+  0%   { opacity: 0 }
+  99%  { opacity: 0 }
+  100% { opacity: 1 }
+}
+@-moz-keyframes logo {
+  0%   { opacity: 0 }
+  99%  { opacity: 0 }
+  100% { opacity: 1 }
+}
+@keyframes logo {
+  0%   { opacity: 0 }
+  99%  { opacity: 0 }
+  100% { opacity: 1 }
+}
+ */
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1024px) {
+    .menu-nav {
+        text-align: right;
+
+        li {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+        }
+        a,
+        span {
+            display: block;
+            color: #4d4d4d;
+            text-decoration: none;
+            margin: 35px 10px 35px 20px;
+            padding-right: 10px;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+        a {
+            position: relative;
+            overflow: hidden;
+            .transition(.2s);
+
+            &:hover {
+                color: #FABF00;
+            }
+            &:active {
+                color: #FABF00;
+            }
+
+            &:before,
+            &:after {
+                content: attr(data-hover);
+                top: 0;
+                left: 0;
+                position: absolute;
+                -webkit-transform: translate3d(0,0,0);
+                -moz-transform: translate3d(0,0,0);
+                transform: translate3d(0,0,0);
+                -webkit-transition: -webkit-transform 0.3s;
+                   -moz-transition: -moz-transform 0.3s;
+                        transition: transform 0.3s;
+                white-space: nowrap;
+                background-color: #fff;
+            }
+            &:after {
+                top: 100%;
+                font-weight: 700;
+                color: #FABF00;
+            }
+            &:hover:before,
+            &:hover:after {
+                -webkit-transform: translateY(-100%);
+                -moz-transform: translateY(-100%);
+                transform: translateY(-100%);
+            }
+        }
+        span {
+            color: #FABF00;
+            font-weight: bold;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                margin: auto;
+                width: 0;
+                border: 22px solid transparent;
+                border-top-color: #FABF00;
+                -webkit-animation: arrow .3s linear forwards;
+                   -moz-animation: arrow .3s linear forwards;
+                     -o-animation: arrow .3s linear forwards;
+                        animation: arrow .3s linear forwards;
+            }
+        }
+    }
+}
+@-webkit-keyframes arrow {
+  0%   { border-width: 0 }
+  100% { border-width: 22px }
+}
+@-moz-keyframes arrow {
+  0%   { border-width: 0 }
+  100% { border-width: 22px }
+}
+@keyframes arrow {
+  0%   { border-width: 0 }
+  100% { border-width: 22px }
+}
+
+
+@media screen and (min-width: 1024px) {
+    
+}
+
+
+@media screen and (max-width: 1023px) {
+    .menu-nav {
+        background-color: #fc0;
+
+        a,
+        span {
+            display: block;
+            width: 250px;
+            color: #4d4d4d;
+            text-decoration: none;
+            margin: 0;
+            padding: 15px 20px;
+            font-size: 16px;
+            text-transform: uppercase;
+            border-bottom: 1px solid  #E1AB00;
+        }
+        span,
+        a:hover {
+            color: #fff;
+            background-color: #000;
+        }
+    }
+    .menu-opened {
+        .transform(translateX(-250px));
+    }
+    .menu-nav {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -250px;
+        bottom: 0;
+        min-height: 100%;
+        .box-shadow(-3px 0 10px rgba(0,0,0,.5));
+    }
+    body {
+        .transition(transform .3s);
+    }
+}
+
+/*------------------------------------menu-nav-------------------*/
+.menu-show {
+    display: none;
+    position: relative;
+    z-index: 12;
+    float: right;
+    color: #000;
+    font-size: 24px;
+    line-height: 38px;
+    text-decoration: none;
+
+    &:before {
+        display: block;
+        width: 36px;
+        height: 36px;
+        text-align: center;
+    }
+    &:active:before {
+        background-color: #4d4d4d;
+    }
+}
+
+
+
+.menu-opened {
+
+    .menu-show:before {
+        content: '\e605';
+    }
+    .drop-down {
+        .box-shadow(5px 0 10px rgba(0,0,0,.5));
+    }
+    .scroll-menu {
+        height: 100%;
+        bottom: 0;
+    }
+}
+
+
+
+
+.scroll-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 100px;
+    width: 5%;
+    min-width: 10px;
+    z-index: 9;
+    cursor: pointer;
+}
+
+
+
+
+@media screen and (max-width: 1023px) {
+    .menu-nav {
+        // display: none;
+    }
+    .menu-show {
+        display: block;
+    }
+}

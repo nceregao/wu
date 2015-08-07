@@ -1,0 +1,26 @@
+/*bxslider*/
+.bx-wrapper {
+      z-index: 1;
+
+    .bx-viewport {
+        left: 0;
+        border: none;
+        .box-shadow();
+        background-color: transparent;
+    }
+    .bx-loading {
+        display: none;
+    }
+    .bx-controls-direction a {
+        text-decoration: none;
+        z-index: 9;
+        background: none;
+
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-indent: 0;
+        }
+    }
+}

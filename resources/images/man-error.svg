@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X7 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="171px" height="188px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 7645 8413"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:#CCCCCC;stroke-width:44.7937}
+    .fil15 {fill:none}
+    .fil3 {fill:#333333}
+    .fil10 {fill:#E08B14}
+    .fil5 {fill:#F7B254}
+    .fil0 {fill:#CCCCCC}
+    .fil1 {fill:black}
+    .fil8 {fill:#4D4D4D}
+    .fil12 {fill:#F0F0ED}
+    .fil11 {fill:white}
+    .fil4 {fill:#333333;fill-rule:nonzero}
+    .fil14 {fill:url(#id0)}
+    .fil6 {fill:url(#id1)}
+    .fil13 {fill:url(#id2)}
+    .fil2 {fill:url(#id3)}
+    .fil7 {fill:url(#id4)}
+    .fil9 {fill:url(#id5)}
+   ]]>
+  </style>
+  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="5756.97" y1="455.188" x2="5756.97" y2="2843.73">
+   <stop offset="0" style="stop-opacity:1; stop-color:#79A4FC"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:white"/>
+  </linearGradient>
+  <linearGradient id="id1" gradientUnits="userSpaceOnUse" x1="312.387" y1="2926.18" x2="1578.05" y2="2926.18">
+   <stop offset="0" style="stop-opacity:1; stop-color:#F7B559"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#F29111"/>
+  </linearGradient>
+  <linearGradient id="id2" gradientUnits="userSpaceOnUse" xlink:href="#id0" x1="1865.67" y1="455.188" x2="1865.67" y2="2843.73">
+  </linearGradient>
+  <linearGradient id="id3" gradientUnits="userSpaceOnUse" xlink:href="#id1" x1="3964.64" y1="4853.93" x2="3964.64" y2="4445.04">
+  </linearGradient>
+  <linearGradient id="id4" gradientUnits="userSpaceOnUse" xlink:href="#id1" x1="6379.33" y1="2896.26" x2="7645" y2="2896.26">
+  </linearGradient>
+  <linearGradient id="id5" gradientUnits="userSpaceOnUse" xlink:href="#id1" x1="4280.48" y1="2991.97" x2="3273.96" y2="2201.89">
+  </linearGradient>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_1028532224416">
+   <ellipse class="fil0" cx="4064" cy="8231" rx="1915" ry="181"/>
+   <path class="fil1" d="M3616 7975c-125,127 -317,145 -468,161 -70,11 -75,95 17,95 128,11 275,16 359,11 141,-10 179,-49 214,-142 0,45 0,80 17,131 42,0 45,0 88,0 32,-50 22,-175 21,-256 -103,0 -145,0 -248,0z"/>
+   <path class="fil1" d="M4374 7975c-126,127 -247,145 -398,161 -70,11 -75,95 17,95 128,11 205,16 288,11 142,-10 179,-49 215,-142 0,45 0,80 16,131 43,0 45,0 88,0 32,-50 23,-175 21,-256 -103,0 -144,0 -247,0z"/>
+   <polygon class="fil2" points="3773,4445 4157,4445 4157,4778 3965,4854 3773,4779 "/>
+   <g>
+    <rect class="fil3" x="3576" y="6726" width="324" height="1266"/>
+    <rect class="fil3" x="4347" y="6726" width="277" height="1266"/>
+   </g>
+   <g>
+    <polygon class="fil1" points="3901,6814 3901,6949 3576,6949 3576,6814 "/>
+    <polygon class="fil1" points="4624,6814 4624,6949 4347,6949 4347,6814 "/>
+   </g>
+   <path class="fil4" d="M1258 3150c12,539 71,1091 470,1479 269,338 943,521 1798,310l-36 530c-135,15 -267,24 -398,27 -749,16 -1329,-156 -1704,-519 -439,-451 -721,-1296 -736,-1944l606 117z"/>
+   <circle class="fil5" cx="3990" cy="2285" r="2285"/>
+   <circle class="fil6" cx="945" cy="2926" r="633"/>
+   <path class="fil4" d="M6699 3120c-11,539 -70,1091 -470,1479 -268,338 -942,521 -1798,310l36 530c135,15 268,24 398,27 749,16 1330,-156 1704,-519 440,-451 721,-1296 736,-1944l-606 117z"/>
+   <circle class="fil7" cx="7012" cy="2896" r="633"/>
+   <path class="fil1" d="M5890 0c-957,0 -1733,776 -1733,1733 0,957 776,1733 1733,1733 957,0 1733,-776 1733,-1733 0,-957 -776,-1733 -1733,-1733z"/>
+   <path class="fil1" d="M1733 0c957,0 1733,776 1733,1733 0,957 -776,1733 -1733,1733 -957,0 -1733,-776 -1733,-1733 0,-957 776,-1733 1733,-1733z"/>
+   <path class="fil8" d="M2276 3005c-1294,548 -2490,-971 -1702,-2090 -210,558 -254,1039 126,1546 416,556 929,646 1576,544z"/>
+   <g>
+    <path class="fil9" d="M3386 3095c-274,-216 -322,-614 -107,-889 216,-275 614,-323 889,-107 275,216 323,614 107,889 -216,275 -614,323 -889,107z"/>
+    <path class="fil10" d="M3798 3262c-1014,34 -832,-1531 138,-1309 331,76 484,347 473,681 -188,-773 -923,-736 -1148,-237 -196,435 113,762 537,865z"/>
+   </g>
+   <g>
+    <path class="fil1" d="M4248 3598l483 -282c155,267 65,609 -202,765 -267,155 -609,65 -764,-202l483 -281z"/>
+    <path class="fil11" d="M4248 3598l483 -282c75,129 93,275 61,409l-768 3 224 -130z"/>
+    <path class="fil12" d="M4109 3727c211,-89 470,-178 681,-267 -12,-51 -33,-98 -59,-144 -235,137 -471,275 -706,412 43,0 40,0 84,-1z"/>
+   </g>
+   <path class="fil13" d="M1866 455c659,0 1194,535 1194,1194 0,660 -535,1195 -1194,1195 -660,0 -1195,-535 -1195,-1195 0,-659 535,-1194 1195,-1194z"/>
+   <g>
+    <rect class="fil11" transform="matrix(0.341454 -0.341454 0.341454 0.341454 1712.9 1363.34)" width="941" height="941" rx="134" ry="134"/>
+    <rect class="fil11" transform="matrix(0.211716 -0.211716 0.211716 0.211716 2181.47 1063.16)" width="941" height="941" rx="134" ry="134"/>
+    <rect class="fil11" transform="matrix(0.159521 -0.159521 0.159521 0.159521 2368.02 1350.68)" width="941" height="941" rx="134" ry="134"/>
+    <rect class="fil11" transform="matrix(0.211716 -0.211716 0.211716 0.211716 2160.81 1611.61)" width="941" height="941" rx="134" ry="134"/>
+   </g>
+   <path class="fil14" d="M5757 455c-660,0 -1194,535 -1194,1194 0,660 534,1195 1194,1195 660,0 1194,-535 1194,-1195 0,-659 -534,-1194 -1194,-1194z"/>
+   <g>
+    <rect class="fil11" transform="matrix(0.341454 -0.341454 0.341454 0.341454 5585.29 1363.34)" width="941" height="941" rx="134" ry="134"/>
+    <rect class="fil11" transform="matrix(0.211716 -0.211716 0.211716 0.211716 6053.85 1063.16)" width="941" height="941" rx="134" ry="134"/>
+    <rect class="fil11" transform="matrix(0.159521 -0.159521 0.159521 0.159521 6240.4 1350.68)" width="941" height="941" rx="134" ry="134"/>
+    <rect class="fil11" transform="matrix(0.211716 -0.211716 0.211716 0.211716 6033.2 1611.61)" width="941" height="941" rx="134" ry="134"/>
+   </g>
+   <path class="fil1" d="M3277 1224c361,-177 763,-179 1133,15l0 564c-357,-293 -790,-283 -1133,-17l0 -562z"/>
+   <path class="fil8" d="M6181 2981c-1240,525 -2387,-930 -1631,-2003 -202,534 -244,996 120,1482 399,533 890,619 1511,521z"/>
+   <polygon class="fil11" points="3526,4939 3987,5802 4429,4913 4157,4778 3965,4854 3773,4779 "/>
+   <polygon class="fil0 str0" points="3946,4924 3991,4924 4064,5055 3986,5166 4157,5651 3998,6000 3824,5684 3964,5166 3876,5055 "/>
+   <polygon class="fil3" points="3258,6814 4871,6814 4746,5462 4433,4906 3987,5802 3526,4939 3323,5520 "/>
+   <polygon class="fil15 str0" points="3526,4939 3773,4779 3965,4854 3827,5147 "/>
+   <polygon class="fil15 str0" points="3965,4854 4157,4778 4429,4913 4136,5161 "/>
+  </g>
+ </g>
+</svg>

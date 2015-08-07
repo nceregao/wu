@@ -1,0 +1,90 @@
+.ac_results {
+    padding: 0px;
+    background-color: white;
+    overflow: hidden;
+    z-index: 99999;
+    font-weight: bold;
+    -webkit-box-shadow: 0 4px 12px rgba(0,0,0,.5);
+       -moz-box-shadow: 0 4px 12px rgba(0,0,0,.5);
+            box-shadow: 0 4px 12px rgba(0,0,0,.5);
+}
+
+.ac_results ul {
+    width: 100%;
+    list-style-position: outside;
+    list-style: none !important;
+    list-style-image: none !important;
+    padding: 0;
+    margin: 0;
+    max-height: 100% !important;
+    border: 1px solid #d1d1d1;
+    border-bottom: none;
+}
+
+.ac_results li {
+    cursor: default;
+    display: block;
+    margin: 0;
+    font-size: 12px;
+    line-height: 16px;
+    overflow: hidden;
+    color: black;
+}
+.ac_results li.last div {
+    padding-top:10px;
+    padding-bottom:5px;
+}
+.ac_results li.last div a{
+    color: #525252;
+}
+.ac_results li.last a{
+font-size:14px;
+}
+.ac_results li > div {
+ padding: 10px;
+ overflow:hidden;
+ font-size:13px;
+}
+.ac_results li:hover > div {
+background: #F0F0ED;
+cursor: pointer;
+}
+.ac_results li > div div{
+float:left;
+margin-right:10px;
+}
+.ac_results li > div span{
+display:block;
+margin-bottom:5px;
+}
+.ac_results li > div span.price{
+color:#000;
+font: italic bold 16px Arial;
+margin-top:10px;
+margin-bottom:0;
+}
+
+.ac_results li > div a{
+display: block;
+margin-top: 10px;
+color:inherit;
+text-decoration:none;
+font-size:16px;
+}
+.ac_results li img {
+    border: 1px solid #ccc;
+}
+.ac_results li > div a strong{
+font-weight: normal;
+}
+
+
+.ac_loading {
+    background: #fff url('../images/bx_loader.gif') 93% center no-repeat !important;
+}
+.ac_odd {
+/*     background-color: #eee; */
+}
+li.ac_over > div {
+background:#79A4FC;
+}

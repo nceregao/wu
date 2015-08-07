@@ -1,0 +1,371 @@
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title><?php echo $title ?></title>
+
+<link rel="stylesheet" href="resources/css/jquery.colorbox.css">
+<link rel="stylesheet" href="resources/css/jquery.bxslider.css">
+<link rel="stylesheet" href="resources/js/jQueryFormStyler-master/jquery.formstyler.css">
+<link rel="stylesheet" href="resources/js/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" href="resources/js/autocomplete/jquery.autocomplete.css">
+<link rel="stylesheet" href="resources/css/style.css">
+
+<script src="resources/js/jquery-1.8.2.min.js"></script>
+<script src="resources/js/jquery.colorbox.min.js"></script>
+<script src="resources/js/jquery.bxslider.min.js"></script>
+<script src="resources/js/jQueryFormStyler-master/jquery.formstyler.min.js"></script>
+<script src="resources/js/jquery-ui.min.js"></script>
+<script src="resources/js/jquery.maskedinput.js"></script>
+<script src="resources/js/countdown.js"></script>
+<script src="resources/js/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="resources/js/TouchSwipe-Jquery-Plugin-master/jquery.touchSwipe.min.js"></script>
+<script src="resources/js/autocomplete/jquery.autocomplete.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $(window).load(function(){
+            $(".j-scroll-products").mCustomScrollbar({
+                axis:"x",
+                theme:"dark",
+                advanced: { autoExpandHorizontalScroll: true },
+                keyboard: { scrollType: 'stepped' },
+                scrollbarPosition: 'outside'
+            });
+        });
+        $("input, select").not('.check-switch').styler();
+
+
+        $('.j-card-slider').bxSlider({ pager: true });
+
+
+        $('.j-gallery').colorbox({
+            rel: '.j-gallery',
+            transition: 'fade',
+            maxHeight: '100%',
+            maxWidth: '100%',
+            current: 'изображение {current} из {total}',
+            previous: 'следующее',
+            next: 'предыдущее',
+            close: 'закрыть'
+        });
+
+
+        //maskinput
+        $('.b-one-click__phone input[name=phone], .b-gf__holder input[name=phone]').mask('+38 (099) 999-99-99');
+
+        //tabs
+        $( "#tabs" ).tabs();
+
+
+        //review-form
+        $('.j-show-form a').click(function(){
+            $(this).parent().toggleClass('show');
+            $('#review_container').slideToggle();
+        });
+
+
+
+        var modalShow = function(el) {
+            $('#blackout').show();
+            $(el).css('display', 'inline-block');
+            $('body').addClass('show-modal');
+        };
+        $('#blackout, #j-close').click(function(e){
+            if (e.target === this && $(this).is(":visible")) {
+                $("#blackout, .modal:visible").hide();
+                $('body').removeClass('show-modal');
+            }
+        });
+
+
+        $('.j-enter').click(function(){ modalShow(".modal-login") });
+        $('.j-report').click(function(){ modalShow(".modal-report") });
+        $('.j-filter').click(function(){ modalShow(".modal-filter") });
+        $('.j-one-click').click(function(){ modalShow(".modal-one-click") });
+        $('.j-added-fav').click(function(){ modalShow(".modal-added-fav") });
+        $('.j-label-price').click(function(){ modalShow(".modal-label-price") });
+        $('#change-email').click(function(){ modalShow(".modal-change-email") });
+        $('#change-contact').click(function(){ modalShow(".modal-change-contact") });
+        $('#change-address').click(function(){ modalShow(".modal-change-address") });
+        $('#change-password').click(function(){ modalShow(".modal-change-password") });
+
+
+
+
+        $('#go-down').click(function(){ $('html,body').animate({scrollTop: $(this).parent().height()}, 300); return false; });
+
+
+        // open searck field
+        $('.search-open').click(function(){
+            $('.b-header__search').toggleClass('g-hide');
+            $('.b-search__field').focus();
+        });
+
+
+
+
+        var allowScrolling = true,
+            menuscr = 100,
+            body = $('body'),
+            wrap = $('#wrap'),
+            header = $('.wrp-header'),
+            dropdown = $('#drop-down'),
+            dropdownBody = $('.drop-down__body'),
+            scrollMenu = $('#scroll-menu'),
+            offsetLeft = $('.wrp-header .grd-full').offset().left,
+            menuLeft = dropdown.width(),
+            openOffsetLeft = menuLeft - offsetLeft,
+            scrtop = $(window).scrollTop();;
+
+
+
+        var mOpen = function(){
+            body.addClass('menu-opened');
+            dropdown.animate({left: 0}, 300);
+            if (menuLeft > offsetLeft) {
+                wrap.animate({left: menuLeft - offsetLeft}, 300);
+            }
+            scrollMenu.css('width', '100%');
+            allowScrolling = false;
+        };
+
+
+        var mClose = function(){
+            body.removeClass('menu-opened');
+            dropdown.animate({left: - menuLeft}, 300);
+            wrap.animate({left: 0}, 300);
+            scrollMenu.css('width', 10);
+            allowScrolling = true;
+        };
+
+        var stopScroll = document.onmousewheel = document.onwheel = function(e) {
+            e = e || window.event;
+            if (!allowScrolling) {
+                e.preventDefault ? e.preventDefault() : (e.returnValue = false);
+            }
+        };
+        $(document).on('touchmove', stopScroll);
+        $(document).on("MozMousePixelScroll", stopScroll);
+
+        $('#blackout').on('touchmove', function(e){
+            e.preventDefault ? e.preventDefault() : (e.returnValue = false);
+        });
+
+
+        $(window).resize(function(){
+            var winHeight = $(this).height(),
+                winWidth = $(this).width(),
+                fH = $(".wrp-footer").outerHeight() || 0;
+
+            $("#wrap").css({'paddingBottom': fH, 'marginBottom': -fH});
+            $('.main-bnr').animate({'height': winHeight - 46}, 1000);
+
+            if ((menuscr = dropdownBody.outerHeight() - dropdown.height()) < 0) menuscr = 0;
+            if (!allowScrolling) mClose();
+            if (header.length && winWidth > 1024) {
+                offsetLeft = $('.wrp-header .grd-full').offset().left;
+                openOffsetLeft = menuLeft - offsetLeft;
+            }
+        }).trigger('resize');
+
+        $('#back-top').click(function(){ $('body,html').animate({ scrollTop: 0 }, 500); return false; });
+
+        $(window).scroll(function(){
+            //if (!allowScrolling) { $(this).scrollTop(scrtop); return false; }
+            scrtop = $(this).scrollTop();
+
+            if ( scrtop > 100) $('#back-top').addClass('back-show');
+            else $('#back-top').removeClass('back-show');
+        });
+
+
+        //menu show button
+        // $('#menu-show').click(mOpen);
+        $('#menu-show').click(function(){
+            body.toggleClass('menu-opened');
+        });
+
+
+
+        (function() {
+
+            var sum = 0,
+                droptop = 0,
+                horisontal;
+
+            function startPosition(droptop) {
+                dropdownBody.animate({top: droptop}, 50);
+                dropdown.animate({left: 0}, 50);
+                if (menuLeft > offsetLeft) {
+                    wrap.animate({left: openOffsetLeft}, 50);
+                }
+            }
+
+            dropdown.swipe({
+                swipeStatus:function(event, phase, direction, distance){
+                    if (phase === 'start') {
+                        sum = 0;
+                        horisontal = true;
+                    } else if (phase === 'move') {
+                        if (direction === 'left' && sum === 0) {
+                            dropdown.css('left', -distance);
+
+                            if (menuLeft > offsetLeft && openOffsetLeft > distance) {
+                                wrap.css('left', openOffsetLeft - distance);
+                            }
+                            if (horisontal) {
+                                horisontal = false;
+                            }
+                        } else if (horisontal === true && menuscr > 0) {
+                            if (direction === 'up') {
+                                if (droptop <= -menuscr) {
+                                    sum = distance * 0.3;
+                                } else if (sum < -menuscr) {
+                                    sum = (d + (distance - d) * 0.3);
+                                } else {
+                                    sum = d = distance * 0.6;
+                                }
+                                sum = droptop - sum;
+                                dropdownBody.css('top', sum);
+                            } else if (direction === 'down') {
+                                if (droptop >= 0) {
+                                    sum = 0;
+                                } else if (sum > 0) {
+                                    sum = d;
+                                } else {
+                                    sum = d = distance * 0.6;
+                                }
+                                sum += droptop;
+                                dropdownBody.css('top', sum);
+                            }
+                        }
+                    }
+                    console.log(phase);
+                },
+                swipeLeft:function(event, direction, distance) {
+                    if (distance < 121) {
+                        startPosition(droptop);
+                    }
+                },
+                swipeRight:function() {
+                    startPosition(droptop);
+                },
+                swipeUp:function() {
+                    droptop = sum > -menuscr ? sum : -menuscr;
+                    startPosition(droptop);
+                },
+                swipeDown:function() {
+                    droptop = sum < 0 ? sum : 0;
+                    startPosition(droptop);
+                },
+                swipe:function(event, direction, distance) {
+                    var target = event && event.target || event.srcElement;
+                    if (distance < 10 && target.tagName === 'A') {
+                        $(target).trigger('click');
+                        if (target.href) {
+                            location.href = target.href;
+                        }
+                    } else if (distance > 120 && direction === 'left') {
+                        mClose();
+                        return;
+                    }
+                },
+                threshold:5,
+                excludedElements:".noSwipe",
+                triggerOnTouchEnd:true,
+                triggerOnTouchLeave:false
+            });
+
+            scrollMenu.swipe({
+                swipeStatus:function(event, phase, direction, distance){
+                    switch (phase) {
+                        case 'start':
+                            $(this).css('width', '100%').off('click', mClose);
+                            break
+                        case 'move':
+                            if ( direction === "right" && allowScrolling ) {
+                                if (distance > 120) {
+                                    mOpen();
+                                    return false;
+                                } else {
+                                    dropdown.css('left', distance - menuLeft);
+                                    if ( distance > offsetLeft ) {
+                                        wrap.css('left', distance - offsetLeft);
+                                    }
+                                }
+                            }
+                            break
+                        case 'cancel':
+                            if (distance < 121) {
+                                mClose();
+                                return false;
+                            }
+                    }
+                },
+                threshold:125,
+                cancelThreshold:50,
+                triggerOnTouchEnd:false,
+                triggerOnTouchLeave: true
+            }).click(mClose);
+
+            var el, mt = 0, mh, s, d;
+            $('#blackout').swipe({
+                swipeStatus:function(event, phase, direction, distance){
+                    if (phase === 'start') {
+                        el = $('.modal:visible');
+                        mh = $(this).height() - el.outerHeight(true);
+                    } else if (mh < 0 && phase === 'move') {
+                        if (direction === 'up') {
+                            if (mt <= mh) {
+                                s = distance * 0.2;
+                            } else if (s <= mh) {
+                                s = d + (distance - d) * 0.2;
+                            } else {
+                                s = d = distance * 0.6;
+                            }
+                            s = mt - s;
+                            el.css('top', s);
+                        } else if (direction === 'down') {
+                            if (mt >= 0) {
+                                s = 0;
+                            } else if (s >= 0) {
+                                s = d;
+                            } else {
+                                s = d = distance * 0.6;
+                            }
+                            s += mt;
+                            el.css('top', s);
+                        }
+                    }
+                },
+                swipe:function() {
+                    if (mh < 0) {
+                        if (s < mh) {
+                            mt = mh;
+                            el.animate({'top': mt}, 50);
+                        }  else if (s > 0) {
+                            mt = 0;
+                            el.animate({'top': 0}, 50);
+                            return;
+                        } else {
+                            mt = s;
+                        }
+                    }
+                },
+                threshold:20,
+                excludedElements:".noSwipe",
+                allowPageScroll: "none"
+            });
+
+        })();
+
+    });
+
+
+</script>
+
+
+<!--[if lt IE 9]>
+    <script src="resources/js/css3-mediaqueries.js"></script>
+    <script src="resources/js/html5.js"></script>
+<![endif]-->

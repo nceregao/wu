@@ -1,0 +1,28 @@
+/*block-breadcrumbs*/
+.breadcrumb {
+    margin: -20px 1.515% 10px;
+    text-align: left;
+
+    li {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1;
+
+        &:after {
+            content: "/";
+            font-size: 16px;
+            color: #999;
+            vertical-align: top;
+        }
+        &:last-child:after {
+            content: none;
+        }
+    }
+    a,
+    span {
+        display: inline-block;
+        padding: 0 5px;
+        color: #999;
+        font-size: 14px;
+    }
+}

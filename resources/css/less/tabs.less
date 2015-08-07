@@ -1,0 +1,80 @@
+/*tabs*/
+.ui-tabs {
+    position: relative;/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+}
+.ui-tabs .ui-tabs-nav {
+    border: 1px solid  #ccc;
+    .liner-gradient(#fff, #f0f0ed);
+}
+.ui-tabs .ui-tabs-nav:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.ui-tabs .ui-tabs-nav li {
+    list-style: none;
+    float: left;
+    position: relative;
+    top: 0;
+    margin: 0 0 -1px;
+    padding: 0;
+    border-right: 1px solid #ccc;
+}
+.ui-tabs .ui-tabs-nav a {
+    padding: 0 10px;
+    color: #4d4d4d;
+    font-size: 16px;
+}
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+    display: block;
+    padding: 11px 15px;
+    text-decoration: none;
+    text-align: center;
+}
+.ui-tabs .ui-tabs-nav .ui-state-focus {
+    background: #e6e6e6;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+    .gradient-vertical(#d0d0d0, #f0f0f0, 22%);
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,
+.ui-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,
+.ui-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor {
+    cursor: default;
+}
+.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
+    cursor: pointer;
+}
+.ui-tabs-panel {
+    display: block;
+    padding: 20px 0;
+    background: none;
+}
+
+
+.cart-form {
+    .ui-tabs-panel {
+        padding: 20px 10px 0;
+        border-bottom: 1px solid  #4d4d4d;
+    }
+}
+@media screen and (max-width: 479px) {
+    .cart-form.ui-tabs {
+        margin: 0 -10px;
+
+        .ui-tabs-nav {
+            display: table;
+            width: 100%;
+            border-right: none;
+
+            li {
+                float: none;
+                width: 50%;
+                display: table-cell;
+            }
+        }
+        .ui-tabs-anchor {
+            padding: 11px 33px;
+        }
+    }
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- meta CSS & Scripts Include -->
+<?php $title="register"; require_once('blocks/general/includings.html'); ?>
+
+</head>
+<body>
+
+
+
+<?php require_once('blocks/general/menu.html'); ?>
+
+
+
+    <!-- wrap -->
+    <div id="wrap">
+
+
+
+
+
+        <!-- Header Include -->
+<?php require_once('blocks/general/header.html'); ?>
+
+
+
+
+
+
+        <!-- Content -->
+        <section class="wrp-content">
+            <div class="wrp-grid">
+
+
+
+                <div class="grd-full">
+
+
+
+                    <div class="block-register">
+
+                        <h1>Регистрация</h1>
+
+                        <div class="general-form">
+                            <form>
+                                <label class="b-gf__holder">
+                                    <input type="text" placeholder="Выше имя*">
+                                    <i class="icon-user"></i>
+                                    <span class="b-gf__reqired">Поле обязательно для ввода</span>
+                                </label>
+                                <label class="b-gf__holder">
+                                    <input type="text" placeholder="Электронная почта (e-mail)*" class="g-error">
+                                    <i class="icon-envelope"></i>
+                                    <span class="b-gf__reqired">Поле обязательно для ввода</span>
+                                </label>
+                                <label class="b-gf__holder">
+                                    <input type="password" placeholder="Придумайте себе пароль*">
+                                    <i class="icon-key"></i>
+                                    <span class="b-gf__reqired">Поле обязательно для ввода</span>
+                                </label>
+                                <div class="b-gf__holder g-tacenter">
+                                    <span class="text-grey">Регистрируясь, вы соглашаетесь с</span>
+                                    <a href="#" class="link-blue-bg">пользовательским соглашением</a>
+                                </div>
+                                <!-- error, warning, info, success -->
+                                <div class="errormsg error" style="display:block">Пожалуйста, введите действительный адрес электронной почты. Например, my_name@domain.com.</div>
+                                <div class="g-preloader" style="display:block"></div>
+                                <input type="submit" value="Зарегистрироваться" class="g-button dark btn-full">
+                            </form>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+        </section>
+        <!-- Content End -->
+
+
+
+<!-- Footer Include -->
+<?php require_once('blocks/general/footer.html'); ?>
+
+
+
+    </div>
+    <!-- wrap End -->
+
+
+<?php require_once('blocks/general/modal.html'); ?>
+
+
+
+</body>
+</html>

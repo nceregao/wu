@@ -1,0 +1,250 @@
+@font-face {
+	font-family: 'wu-ico-font-base';
+	src:url('fonts/wu-ico-font-base.eot?-4ccdg1');
+	src:url('fonts/wu-ico-font-base.eot?#iefix-4ccdg1') format('embedded-opentype'),
+		url('fonts/wu-ico-font-base.ttf?-4ccdg1') format('truetype'),
+		url('fonts/wu-ico-font-base.woff?-4ccdg1') format('woff'),
+		url('fonts/wu-ico-font-base.svg?-4ccdg1#wu-ico-font-base') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'wu-ico-font-base';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-alarm-clock:before {
+	content: "\e600";
+}
+.icon-angle-down:before {
+	content: "\e601";
+}
+.icon-angle-left:before {
+	content: "\e604";
+}
+.icon-angle-right:before {
+	content: "\e605";
+}
+.icon-angle-up:before {
+	content: "\e606";
+}
+.icon-camera:before {
+	content: "\e607";
+}
+.icon-caret-down:before {
+	content: "\e608";
+}
+.icon-caret-left:before {
+	content: "\e609";
+}
+.icon-caret-right:before {
+	content: "\e60a";
+}
+.icon-caret-up:before {
+	content: "\e60b";
+}
+.icon-check:before {
+	content: "\e60c";
+}
+.icon-check-circle:before {
+	content: "\e60d";
+}
+.icon-clock-o:before {
+	content: "\e60e";
+}
+.icon-clone:before {
+	content: "\e60f";
+}
+.icon-cloud:before {
+	content: "\e610";
+}
+.icon-comment:before {
+	content: "\e611";
+}
+.icon-download:before {
+	content: "\e612";
+}
+.icon-download-2:before {
+	content: "\e613";
+}
+.icon-envelope-o:before {
+	content: "\e614";
+}
+.icon-exclamation-circle:before {
+	content: "\e615";
+}
+.icon-eye:before {
+	content: "\e616";
+}
+.icon-flag:before {
+	content: "\e617";
+}
+.icon-folder:before {
+	content: "\e618";
+}
+.icon-info-circle:before {
+	content: "\e619";
+}
+.icon-key:before {
+	content: "\e61a";
+}
+.icon-login:before {
+	content: "\e61b";
+}
+.icon-logout:before {
+	content: "\e61c";
+}
+.icon-mail-reply:before {
+	content: "\e61d";
+}
+.icon-map-marker:before {
+	content: "\e61e";
+}
+.icon-menu:before {
+	content: "\e62e";
+}
+.icon-minus-circle:before {
+	content: "\e62f";
+}
+.icon-minus-circle-2:before {
+	content: "\e630";
+}
+.icon-paperclip:before {
+	content: "\e631";
+}
+.icon-paper-plane:before {
+	content: "\e632";
+}
+.icon-phone:before {
+	content: "\e633";
+}
+.icon-plus-circle:before {
+	content: "\e634";
+}
+.icon-question-circle:before {
+	content: "\e635";
+}
+.icon-refresh:before {
+	content: "\e636";
+}
+.icon-remove:before {
+	content: "\e637";
+}
+.icon-search:before {
+	content: "\e638";
+}
+.icon-shopping-cart:before {
+	content: "\e639";
+}
+.icon-star:before {
+	content: "\e63a";
+}
+.icon-times:before {
+	content: "\e63b";
+}
+.icon-times-circle:before {
+	content: "\e63c";
+}
+.icon-user:before {
+	content: "\e63d";
+}
+.icon-desktop:before {
+	content: "\f108";
+}
+.icon-laptop:before {
+	content: "\f109";
+}
+.icon-tablet:before {
+	content: "\f10a";
+}
+.icon-mobile:before {
+	content: "\f10b";
+}
+.icon-soc-vk:before {
+	content: "\e61f";
+}
+.icon-soc-vk-2:before {
+	content: "\e621";
+}
+.icon-soc-ok:before {
+	content: "\e622";
+}
+.icon-soc-t:before {
+	content: "\e623";
+}
+.icon-soc-f:before {
+	content: "\e624";
+}
+.icon-soc-g:before {
+	content: "\e627";
+}
+.icon-soc-yt-1:before {
+	content: "\e628";
+}
+.icon-soc-yt-2:before {
+	content: "\e629";
+}
+.icon-soc-in:before {
+	content: "\e62a";
+}
+.icon-soc-p:before {
+	content: "\e62b";
+}
+.icon-soc-p-2:before {
+	content: "\e62c";
+}
+.icon-soc-vi:before {
+	content: "\e62d";
+}
+.icon-file-pdf-o:before {
+	content: "\f1c1";
+}
+.icon-file-word-o:before {
+	content: "\f1c2";
+}
+.icon-file-excel-o:before {
+	content: "\f1c3";
+}
+.icon-file-powerpoint-o:before {
+	content: "\f1c4";
+}
+.icon-file-photo-o:before {
+	content: "\f1c5";
+}
+.icon-file-zip-o:before {
+	content: "\f1c6";
+}
+.icon-file-sound-o:before {
+	content: "\f1c7";
+}
+.icon-file-movie-o:before {
+	content: "\f1c8";
+}
+.icon-file-code-o:before {
+	content: "\f1c9";
+}
+.icon-quotes-2:before {
+	content: "\e602";
+}
+.icon-quotes-1:before {
+	content: "\e603";
+}
+.icon-rub:before {
+	content: "\e620";
+}
+.icon-usd:before {
+	content: "\e625";
+}
+.icon-uah:before {
+	content: "\e626";
+}
